@@ -1,0 +1,32 @@
+{
+  "name": "@wei-shaw/cvm",
+  "version": "0.1.0",
+  "description": "Claude Code Version Manager",
+  "type": "module",
+  "bin": {
+    "cvm": "dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "commander": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

@@ -12,6 +12,50 @@ Claude Code releases frequently — sometimes multiple times a day. You might ne
 
 CVM makes all of this a single command.
 
+## Uninstall Official Claude Code First
+
+CVM manages its own `claude` binary via shim. To avoid conflicts, **you must uninstall the official Claude Code before using CVM**.
+
+<details>
+<summary><strong>npm (global install)</strong></summary>
+
+```bash
+npm uninstall -g @anthropic-ai/claude-code
+```
+</details>
+
+<details>
+<summary><strong>macOS (Homebrew)</strong></summary>
+
+```bash
+brew uninstall claude-code
+```
+</details>
+
+<details>
+<summary><strong>Linux (native binary / standalone install)</strong></summary>
+
+```bash
+# If installed via the official install script
+rm -f /usr/local/bin/claude
+
+# If installed to ~/.local/bin
+rm -f ~/.local/bin/claude
+```
+
+If you're unsure where `claude` is installed:
+
+```bash
+which claude
+```
+</details>
+
+After uninstalling, verify that `claude` is no longer available:
+
+```bash
+which claude  # should return nothing or "not found"
+```
+
 ## Quick Start
 
 ```bash
